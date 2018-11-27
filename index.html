@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV J.Alejandro L.F.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/style-cv.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./image/icon.png">
+    <link rel="stylesheet" href="./styles/stylenum.css">
+    <script src="./modulos/jspdf.min.js"></script>
+    <script src="./scripts/createPDF.js"></script>
+</head>
+<body>
+    <div id="tam"></div>
+    <header>
+        <h1>José alejandro López Flores</h1>
+    </header>
+    <section>
+        <div id="Izquierda2" onclick="setMenu()"><span class="icon-th-list"></span></div>
+        <div id="Izquierda">
+            <div id="descargar" onclick="confirmar()"><span class="icon-download"></span><span class="tooltip">Descargar curriculum</span></div>
+            <div class="centrar">
+                <img id="imgPer" src="./image/pp.jpg">
+            </div>
+            <div class="ct2">
+                <h3>Jose alejandro Lopez Flores</h3>
+                <!-- <h4>Pasante Ingenieria en Sistemas Computacionales</h4> -->
+            </div>
+            
+            <div class="Botones">
+                <ul>
+                    <li onclick='setPantalla("btnDTP")' onmouseover="setHover(1,'btnDTP')" onmouseout="setHover(0,'btnDTP')"><a id="btnDTP" href="#">Datos Personales</a></li>
+                    <li onclick='setPantalla("btnHA")' onmouseover="setHover(1,'btnHA')" onmouseout="setHover(0,'btnHA')"><a id="btnHA" href="#">Historial Academico</a></li>
+                    <li onclick='setPantalla("btnH")' onmouseover="setHover(1,'btnH')" onmouseout="setHover(0,'btnH')"><a id="btnH" href="#">Habilidades</a></li>
+                    <li onclick='setPantalla("btnEP")' onmouseover="setHover(1,'btnEP')" onmouseout="setHover(0,'btnEP')"><a id="btnEP" href="#">Experiencia Profecional</a></li>
+                    <li onclick='setPantalla("btnPR")' onmouseover="setHover(1,'btnPR')" onmouseout="setHover(0,'btnPR')"><a id="btnPR" href="#">Reconocimientos</a></li>
+                    <li onclick='setPantalla("btnC")' onmouseover="setHover(1,'btnC')" onmouseout="setHover(0,'btnC')"><a id="btnC" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="Derecha">
+            <div class="cajas" id="DtPersonales" >
+                <div class="titulos">
+                    <img class="imageCur" src="./image/dtosicon.svg" >
+                    <div class="texto">Datos personales</div> 
+                </div>
+                <div class="contenido">
+                    <p>Nombre: Jose Alejandro Lopez Flores</p>    
+                    <p>Fecha de nacimiento: 18 Noviembre de 1996</p>
+                    <p>Estado civil: Soltero</p>
+                    <p>Nacionalidad: Mexicana</p>
+                    <p id="Edad">Edad: 21 Años</p>
+                </div>
+            </div>
+            <div class="cajas" id="HistorialACD">
+                <div class="titulos">
+                    <img class="imageCur" src="./image/estuicon.png" >
+                    <div class="texto">Historial Academico</div>
+                </div>
+                <div class="contenido">
+                    <p class="encabezado">Educacion superior</p>
+                    <div class="descrip">
+                        <p>Instituto tecnologico Superior de Acayucan</p>
+                        <p>Ingenieria en Sistemas Computacionales</p>
+                        <p>Especialidad: Aplicaciones moviles</p>
+                        <p>Ciclo escolar: Agosto 2015 - Actualmente en curso "7 Semestre"</p>
+                    </div>
+                    <p class="encabezado">Educacion media superior</p>
+                    <div class="descrip">
+                        <p>Colegio de Bachilleres del estado de Veracruz</p>
+                        <p>Plantel #17</p>
+                        <p>Area: Redes de Computadoras CISCO</p>
+                        <p>Ciclo escolar: Agosto 2012 - Julio 2015</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cajas" id="Habilidades">
+                <div class="titulos">
+                    <img class="imageCur" src="./image/habiliicon.png" >
+                    <div class="texto">Habilidades</div>
+                </div>
+                <div class="contenido">
+                    <div class="barras-varias">
+                        <div class="palabra">PhotoShop:</div>
+                        <div class="barra-num">
+                                <div class="barra-ext">
+                                    <div class="barra-gene" id="barra-int">50%</div>
+                                </div>
+                        </div>
+                        <div class="barras-varias">
+                            <div class="palabra">Programacion Java:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="barra-int1">80%</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="barras-varias">
+                            <div id="er" class="palabra">Base de datos MySql:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="barra-int2">70%</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="barras-varias">
+                            <div class="palabra">Microsoft Word:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="barra-int3">90%</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="barras-varias">
+                            <div class="palabra">Trabajo en equipo:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="barra-int4">95%</div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="barras-varias">
+                            <div class="palabra">HTML & CSS:</div>
+                            <div class="barra-num">
+                                    <div class="barra-ext">
+                                        <div class="barra-gene" id="barra-int5">30%</div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cajas" id="ExpPro">
+                <div class="titulos">
+                    <img class="imageCur" src="./image/expeicon.png" >
+                    <div class="texto">Experiencia Profesional</div>
+                </div>
+            </div>
+            <div class="cajas" id="Recon">
+                <div class="titulos">
+                    <img class="imageCur" src="./image/premicon.png" >
+                    <div class="texto">Reconocimientos</div>
+                </div>
+                <div class="contenido">
+                    <div id="bloquesExp">
+                            <span class="iconosExp icon-number"></span>
+                            <p id="desReco">Reconocimiento de participacion en el Encuentro Nacional de Innovacion Tecnologica, en Tehuacan Puebla</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cajas" id="Contac">
+                <div class="titulos">
+                    <img class="imageCur" src="./image/teleicon.png" >
+                    <div class="texto">Contacto</div>
+                </div>
+                <div class="contenido" id="ctn1">
+                    <div id="bloque1">
+                        <div class="segmento">
+                            <div class="img-contac1" onclick='copyToClipboardGeneral("9221552556")'>
+                                <img class="img-contac" src="./image/whaticon.png">
+                                <span class="tooltip" id="tool">Copiar numero telefonico</span>
+                            </div>
+                            <div class="enunciado">922-155-2556</div>
+                        </div>
+                        <div class="segmento">
+                            <div class="img-contac1" onclick='copyToClipboard("alex lopes")'>
+                                <a href="https://www.facebook.com/alex.lopes.3538" target="_blank">
+                                    <img class="img-contac" id="fb" src="./image/fbIcon.ico">
+                                </a>
+                                <span class="tooltip" id="tool">Ver perfil y Copiar nombre</span>
+                            </div>
+                            <div class="enunciado">Alex lopes</div>
+                        </div>
+                        <div class="segmento">
+                            <div class="img-contac1">
+                                <a href="https://twitter.com/Alejand45768571" target="_blank">
+                                    <img class="img-contac" src="./image/twiter.png">
+                                </a>
+                                <span class="tooltip" id="tool">Ver perfil</span>
+                            </div>
+                            <div class="enunciado">Alejandro Lopez Flores</div>
+                        </div>
+                    </div>
+                    <div id="bloque2">
+                            <div class="segmento">
+                                <div class="img-contac1" onclick="copyToClipboardGeneral('aleflo_1996@outlook.com')">
+                                    <a href="https://login.live.com/">
+                                        <img class="img-contac" src="./image/hotmail.png">
+                                    </a>
+                                    <span class="tooltip" id="tool">Ir a Outlook.com y Copiar contacto</span>
+                                </div>
+                                <div class="enunciado">aleflo_1996@outlook.com</div>
+                            </div>
+                            <div class="segmento">
+                                <div class="img-contac1" onclick="copyToClipboardGeneral('alexlofa45@gmail.com')">
+                                    <a href="https://gmail.com" target="_blank">
+                                        <img class="img-contac" src="./image/gmail.png">
+                                    </a>
+                                    <span class="tooltip" id="tool">Ir a Gmail.com y Copiar contacto</span>
+                                </div>
+                                <div class="enunciado">alexlofa45@gmail.com</div>
+                            </div>
+                            <div class="segmento">
+                                <div class="img-contac1">
+                                    <a href="https://github.com/alejandro-jalf" target="_blank">
+                                        <img class="img-contac" src="./image/giticon.png">
+                                    </a>
+                                    <span class="tooltip" id="tool">Ir a la pagina de Github</span>
+                                </div>
+                                <div class="enunciado">alejandro-jalf</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="./scripts/libEdad.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script>
+        // document.getElementById('Derecha').style.height = ((screen.height-359))+"px";
+    </script>
+</body>
+</html>

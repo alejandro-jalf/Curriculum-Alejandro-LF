@@ -1,0 +1,492 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: inline;
+    background: rgb(255, 248, 210);
+}
+
+h1{
+    background:#030124; 
+    color: aliceblue;
+    padding: 10px 30px 10px;
+    position: fixed;
+    width: 100%;
+    /* padding-left: 320px; */
+    text-align: center;
+}
+
+h3{
+    background: #fbfbf2;
+    border-bottom: 3px double #000;
+}
+
+#imgPer{
+    width: 200px;
+    height: 200px;
+    border: 8px  solid #fbfbf2;
+    border-radius: 100%;
+}
+
+#Izquierda{
+    background: rgb(0, 74, 90);
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    padding-top: 60px;
+}
+
+/* #ca4203 */
+#Izquierda2{
+    background: #014b5c;
+    width: 60px;
+    height: 41px;
+    width: 60px;
+    visibility: hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+
+    margin: 0px;
+    position: fixed;
+    z-index: 1;
+    padding-top: 16px;
+    color: #fff;
+}
+
+#Izquierda2:hover{
+    color: #ff2701;
+}
+
+
+.centrar{
+    background: #014b5c;
+    padding-left: 15%; 
+    padding-top: 20px;
+}
+
+.ct2{
+    background: #fbfbf2;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 17px;
+    color: #000;
+    border-bottom: 3px solid #000;
+    left: 50px;
+    
+}
+
+h4{
+    font-size: 18px;
+}
+
+.Botones{
+    padding-top: 15px;
+    
+}
+
+li{
+    width: 100%;
+    list-style: none;
+    height: 25px;
+    padding-top: 18px;
+    text-align: center;
+}
+
+a{
+    text-transform: uppercase;
+    text-decoration: none;
+    text-decoration-style: none;
+    font-family: Helvetica;
+    color: #ffffff;
+    font-size: 19px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    text-shadow: 2px 2px #000;
+}   
+
+a:hover {
+    color: #fbff00;
+}
+
+
+#Derecha{
+    background: rgb(255, 248, 210);
+    padding-left: 300px;
+    padding-top: 57px;
+    /* background-image: url("../image/fondo.png"); */
+}
+
+.cajas{
+    background: rgb(255, 248, 210);
+}
+
+.imageCur{
+    width: 130px;
+    height: 130px;
+    float: none; 
+}
+
+.titulos{
+    font-size: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.contenido{
+    padding-left: 60px;
+    padding-top: 30px;
+    background: rgb(255, 248, 210);
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    padding-bottom: 20px;
+    /* font-weight: bold; */
+}
+
+.encabezado{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.descrip{
+    text-indent: 40px;
+}
+
+.barra-ext{
+    background: rgb(214, 219, 219);
+    width: 500px;
+    height: 30px;
+    border: 1px solid rgb(0, 167, 167);
+    border-radius: 30px;
+    padding: 3px 3px 5px 3px;
+}
+
+.barra-gene{
+    background: rgb(106, 128, 255);
+    height: 27px;
+    width: 25%;
+    padding-top: 3px;
+    padding-left: 25%;
+    border: 1px solid rgb(0, 167, 167);
+    border-radius: 30px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#barra-int1{
+    padding-left: 40%;
+    width: 40%;
+}
+
+#barra-int2{
+    padding-left: 35%;
+    width: 35%;
+}
+
+#barra-int3{
+    padding-left: 45%;
+    width: 45%;
+}
+
+#barra-int4{
+    padding-left: 47%;
+    width: 48%;
+}
+
+#barra-int5{
+    padding-left: 15%;
+    width: 15%;
+}
+
+.barras-varias{
+    padding-top: 20px;
+    display: block;
+}
+
+.palabra{
+    width: 190px;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 7px;
+}
+
+.barra-num{
+    width: 100px;
+    padding-left: 200px;
+}
+
+
+
+.segmento{
+    /* background: rgb(219, 5, 5);   */
+    height: 100px;
+    width: 400px; 
+}
+
+.img-contac{
+    width: 90px;
+    height: 90px;
+}
+
+#fb{
+    width: 70px;
+    height: 70px;
+    padding-left: 5px;
+}
+
+.img-contac1{
+    /* background: rgb(5, 219, 5); */
+    width: 100px;
+    float: left;
+}
+
+.enunciado{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: #fbff00; */
+    width: 300px;
+    padding-top: 35px;
+    padding-left: 110px;
+}
+
+#ctn1{
+    /* background: #000; */
+    display: flex;
+}
+
+#bloque1{
+    /* background: rgb(21, 142, 241); */
+    width: 450px;
+}
+
+#bloque2{
+    /* background: rgb(21, 142, 241); */
+    width: 450px;
+}
+
+.tooltip{
+    visibility: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    background-color: #3b3f4d;
+    color: #fff;
+    padding: 6px 2px 2px 2px;
+    border: 1px solid rgb(56, 56, 58);
+    border-radius: 12px;
+    text-align: center;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.img-contac1:hover .tooltip{
+    visibility: visible;
+    
+}
+
+#descargar {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    left: 250px;
+}
+
+#descargar .tooltip{
+    font-size: 18px;
+    color: #000;
+    background: #ffffff;
+}
+
+#descargar:hover {
+    color: rgb(255, 72, 0);
+    cursor: pointer;
+}
+
+#descargar:hover .tooltip{
+    visibility: visible;
+}
+
+#desReco{
+    /* background: #014b5c; */
+    width: 91%;
+    float: right;
+}
+
+.iconosExp{
+    /* background: #fbff00; */
+    width: 7%;
+    height: 50px;
+    font-size: 50px;
+    float: left;    
+    cursor: pointer;
+    color: #ff6c0a;
+}
+
+.iconosExp:hover{
+    color: #d1ce24;
+}
+
+/* Responsive desing codigo */
+
+@media screen and (max-width: 900px){
+    #ctn1{
+        display: block;
+    }
+
+    h1{
+        padding-left: 57px;
+    }
+
+}
+
+@media screen and (max-width: 830px){
+    .centrar{
+        display: none;
+    }
+    
+    .ct2{
+        display: none;
+    }
+
+    .Botones{
+        padding-top: 54px;
+    }
+
+    #Izquierda2{
+        position: fixed;
+        visibility: visible;
+    }
+
+    #Izquierda{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    #Derecha{
+        padding-left: 0px;
+    }
+
+}
+
+/* @media screen and (min-width: 831px){
+
+    /* @media screen and (max-height: 600px){
+        #Izquierda{
+            padding-top: 0px;
+        }
+    }
+
+    @media screen and (max-height: 540px){
+        .centrar{
+            display: none;
+        }
+        
+        .ct2{
+            display: none;
+        }
+
+        .Botones{
+            padding-top: 54px;
+        }
+
+        #Izquierda2{
+            position: fixed;
+            visibility: visible;
+        }
+
+        #Izquierda{
+            position: absolute;
+            visibility: hidden;
+        }
+
+        #Derecha{
+            padding-left: 0px;
+        }
+
+        ul li{
+            border-bottom: 3px dotted rgb(255, 255, 255);
+        }
+    } 
+
+    .centrar{
+        display: block;
+    }
+    
+    .ct2{
+        display: block;
+    }
+    #Izquierda{
+        position: fixed;
+        visibility: visible;
+    }
+
+} */
+
+@media screen and (max-height: 600px){
+    #Izquierda{
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-height: 540px){
+    .centrar{
+        display: none;
+    }
+    
+    .ct2{
+        display: none;
+    }
+
+    .Botones{
+        padding-top: 54px;
+    }
+
+    #Izquierda2{
+        position: fixed;
+        visibility: visible;
+    }
+
+    #Izquierda{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    #Derecha{
+        padding-left: 0px;
+    }
+
+    ul li{
+        /* border-bottom: 3px dotted rgb(255, 255, 255); */
+    }
+}
+
+@media screen and (max-height: 318px){
+    #Izquierda .Botones ul li a{
+        font-size: 18px;
+        padding-bottom: 1px;
+    }
+
+    #Izquierda .Botones ul li{
+        padding-top: 4px;
+    }
+}
+
+@media screen and (min-height: 543px){ 
+    #Izquierda{
+        position: fixed;
+        visibility: visible;
+    }
+}
+
+/* Termino de codigo para resposive Design */
