@@ -28,7 +28,7 @@ setOldActual = () => {
         }
     }
 
-    document.getElementById("Edad").innerText = `Edad: ${edad} Años`;
+    document.getElementById("Edad").innerText = ` ${edad} Años`;
 }
 
 setOldActual();
