@@ -1,5 +1,5 @@
 
-let cont = -1;
+let cont = 0;
 
 function getSizeHeight(){
     document.getElementById("DtPersonales").style.height = (screen.height-159)+"px";
@@ -88,7 +88,7 @@ const copyToClipboardGeneral = str => {
     alert(`Se a copiado "${str}" al portapapeles`)
 };
 
-setHover = (value,id) => {
+const setHover = (value,id) => {
     if (value==0){
         document.getElementById(id).style.color = "#fff";
     } else {
@@ -98,18 +98,19 @@ setHover = (value,id) => {
 }
 
 setMenu = () => {
-    cont ++;
+    console.log("contador");
     if (cont == 1){
         document.getElementById("Izquierda").style.visibility = "visible";
-        document.getElementById("Izquierda").style.position = "fixed";
-        cont = -1;
+        cont = 0;
     } else {
         document.getElementById("Izquierda").style.visibility = "hidden";
-        
+        cont = 1;
     }
 }
 
-window.addEventListener('resize', () => {
+document.getElementById("Izquierda2").addEventListener("click", setMenu());
+
+window.onresize = (event) => {
     const tamaño =
     window.innerHeight 
     || document.documentElement.clientWidth
@@ -119,6 +120,6 @@ window.addEventListener('resize', () => {
         document.getElementById("Izquierda").style.visibility = "visible";
         document.getElementById("Izquierda").style.position = "fixed";
     }
-});
+}
 
 
