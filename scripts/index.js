@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         menuVisible: false,
         leftVisible: false,
+        backgroundVisible: false,
         screenActual: "DtPersonales",
         habilidades: [
             {name: "PhotoShop", porcentaje: 20, id: "barra-int0"},
@@ -28,32 +29,31 @@ var app = new Vue({
     },
     mounted: function(){
         this.setLeft();
-        this.menuVisible = (this.isMovilScreen() === 0) ? true : false;
+        this.menuVisible = (this.isMovilScreen() === 1) ? true : false;
+        this.backgroundVisible = (this.isMovilScreen() === 1) ? true : false;
     },
     methods: {
         setLeft: function() {
-            if (this.isMovilScreen() === 0) {
+            if (this.isMovilScreen() === 1) {
+                this.leftVisible = (this.isMovilScreen() === 1) ? true : false;
+            } else {
                 this.leftVisible = true;
             }
         },
         isMovilScreen: function() {
-            const lengthS = window.innerHeight || document.documentElement.clientWidth || document.body.clientWidth;
-            const isMovil = (lengthS >= 540) ? 0 : 1;
-            // alert(lengthS + "__"+ isMovil + "msj"); 
+            const lengthS = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            const isMovil = (lengthS > 830) ? 0 : 1;
             return isMovil
         },
         setMenu: function() {
             this.leftVisible = !this.leftVisible;
+            this.backgroundVisible = !this.backgroundVisible;
         },
         setScreen: function(screen) {
             this.screenActual = screen;
-            // alert(this.isMovilScreen());
             if (this.isMovilScreen() === 1) {
                 this.setMenu();
             }
-        },
-        none: function(){
-            return;
         },
         copyToClipboardGeneral: function(str){
             if (next === "") return;

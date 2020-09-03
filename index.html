@@ -16,7 +16,7 @@
     </header>
     <section id="app">
         <div v-if="menuVisible" id="Izquierda2" @click="setMenu()"><span class="icon-th-list"></span></div>
-        
+        <div v-if="backgroundVisible" class="background"></div>
         <div v-if="leftVisible" id="Izquierda">
             <div id="descargar" onclick="confirmar()"><span class="icon-download"></span><span class="tooltip">Descargar curriculum</span></div>
             <div class="centrar">
@@ -156,7 +156,8 @@
     <script>
         window.onresize = (event) => {
             app.setLeft();
-            app.menuVisible = (app.isMovilScreen() == 0) ? true : false ;
+            app.menuVisible = (app.isMovilScreen() == 1) ? true : false ;
+            app.backgroundVisible = (app.isMovilScreen() === 1) ? true : false;
         }
     </script>
     <!-- <script src="./scripts/script.js"></script> -->
