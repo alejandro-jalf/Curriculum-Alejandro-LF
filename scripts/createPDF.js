@@ -140,11 +140,12 @@ createPDF = () => {
 
     doc.setFontType("");
 
+    const edad = app.getOldActual();
     doc.text(37,135,"José Alejandro López Flores");
     doc.text(37,145,"18 Noviembre 1996");
     doc.text(37,155,"Soltero");
     doc.text(37,165,"Mexicana");
-    doc.text(37,175,"21 Años");
+    doc.text(37,175,`${edad} Años`);
 
     //Contenido contacto
     doc.setFontType("bold");

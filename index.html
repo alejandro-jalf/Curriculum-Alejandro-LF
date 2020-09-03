@@ -28,12 +28,12 @@
             
             <div class="Botones">
                 <ul>
-                    <li @click="setScreen('DtPersonales')"><a v-bind:class="{activated: (screenActual === 'DtPersonales')}" id="btnDTP" href="#">Datos Personales</a></li>
-                    <li @click="setScreen('HistorialACD')"><a v-bind:class="{activated: (screenActual === 'HistorialACD')}" id="btnHA" href="#">Historial Academico</a></li>
-                    <li @click="setScreen('Habilidades')"><a v-bind:class="{activated: (screenActual === 'Habilidades')}" id="btnH" href="#">Habilidades</a></li>
-                    <li @click="setScreen('ExpPro')"><a v-bind:class="{activated: (screenActual === 'ExpPro')}" id="btnEP" href="#">Experiencia Profecional</a></li>
-                    <li @click="setScreen('Recon')"><a v-bind:class="{activated: (screenActual === 'Recon')}" id="btnPR" href="#">Reconocimientos</a></li>
-                    <li @click="setScreen('Contac')"><a v-bind:class="{activated: (screenActual === 'Contac')}" id="btnC" href="#">Contacto</a></li>
+                    <li @click="setScreen('DtPersonales')" v-bind:class="{activated: (screenActual === 'DtPersonales')}">Datos Personales</li>
+                    <li @click="setScreen('HistorialACD')" v-bind:class="{activated: (screenActual === 'HistorialACD')}">Historial Academico</li>
+                    <li @click="setScreen('Habilidades')" v-bind:class="{activated: (screenActual === 'Habilidades')}">Habilidades</li>
+                    <li @click="setScreen('ExpPro')" v-bind:class="{activated: (screenActual === 'ExpPro')}">Experiencia Profecional</li>
+                    <li @click="setScreen('Recon')" v-bind:class="{activated: (screenActual === 'Recon')}">Reconocimientos</li>
+                    <li @click="setScreen('Contac')" v-bind:class="{activated: (screenActual === 'Contac')}">Contacto</li>
                 </ul>
             </div>
         </div>
@@ -50,7 +50,7 @@
                     <p><span style="font-weight: bold;">Fecha de nacimiento:</span> 18 Noviembre de 1996</p>
                     <p><span style="font-weight: bold;">Estado civil:</span> Soltero</p>
                     <p><span style="font-weight: bold;">Nacionalidad:</span> Mexicana</p>
-                    <p><span style="font-weight: bold;">Edad:</span> <span id="Edad"> 21 Años</span></p>
+                    <p><span style="font-weight: bold;">Edad:</span> {{getOldActual()}} Años</p>
                 </div>
             </div>
             <div v-if="screenActual === 'HistorialACD'" class="cajas" id="HistorialACD">
@@ -147,13 +147,12 @@
 
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="./scripts/index.js"></script>
 
     <script src="./modulos/jspdf.min.js"></script>
     <script src="./scripts/createPDF.js"></script>
-    <script src="./scripts/libEdad.js"></script>
+    <!-- <script src="./scripts/libEdad.js"></script> -->
     <script>
         window.onresize = (event) => {
             app.setLeft();
@@ -161,6 +160,5 @@
             app.backgroundVisible = (app.isMovilScreen() === 1) ? true : false;
         }
     </script>
-    <!-- <script src="./scripts/script.js"></script> -->
 </body>
 </html>

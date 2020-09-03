@@ -100,31 +100,25 @@ h4{
 .activated {
     text-decoration: underline;
     color: #fbff00;
+    background: #002e3a;
 }
 
 li{
-    width: 100%;
+    width: 90%;
     list-style: none;
     height: 25px;
-    padding-top: 18px;
-    text-align: center;
-}
-
-a{
-    text-transform: uppercase;
-    text-decoration: none;
-    text-decoration-style: none;
+    padding: 9px 0px;
+    text-align: left;
     font-family: Helvetica;
     color: #ffffff;
-    font-size: 19px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 100%;
-    text-shadow: 2px 2px #000;
-}   
+    font-size: 22px;
+    cursor: pointer;
+    padding-left: 10%;
+}
 
-a:hover {
+li:hover {
     color: #fbff00;
+    background: #002e3a;
 }
 
 #Derecha{
@@ -321,7 +315,7 @@ p{
     color: #fff;
     font-size: 30px;
     position: absolute;
-    top: 15px;
+    bottom: 15px;
     left: 250px;
 }
 

@@ -69,6 +69,39 @@ var app = new Vue({
             document.execCommand('copy');
             document.body.removeChild(newElement);
             alert(`Se a copiado "${str}" al portapapeles`);
+        },
+        getOldActual: function() {
+            const fecha = new Date();
+            
+            let año_actual = 0;
+            let mes_actual = 0;
+            let dia_actual = 0;
+            let edad = 0;
+
+            dia_actual = fecha.getDate();
+            mes_actual = (fecha.getMonth())+1;
+            año_actual = fecha.getFullYear();
+
+            if (mes_actual > 11) {
+                edad = año_actual - 1996;
+                return edad;
+            }
+
+            if (mes_actual < 11) {
+                edad = año_actual - 1997;
+                return edad;
+            }
+
+            if (mes_actual == 11) {
+                if (dia_actual < 18) {
+                    edad = 2018 - 1997;
+                    return edad;
+                }
+                if ( dia_actual >= 18) {
+                    edad = 2018 - 1996;
+                    return edad;
+                }
+            }
         }
     }
 });
