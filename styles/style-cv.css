@@ -4,17 +4,13 @@
 }
 
 body{
+    position: relative;
     display: inline;
     background: #ffffff;
 }
-
-h1{
-    background:#030124; 
-    color: aliceblue;
-    padding: 10px 30px 10px;
-    position: fixed;
+header{
+    position: relative;
     width: 100%;
-    text-align: center;
 }
 
 h3{
@@ -39,7 +35,7 @@ h3{
 
 .background{
     position: absolute;
-    top: 0px;
+    /* top: 0px; */
     left: 0px;
     bottom: 0px;
     background: rgba(0, 34, 42, 0.63);
@@ -125,11 +121,21 @@ a:hover {
     color: #fbff00;
 }
 
-
 #Derecha{
     background: #ffffff;
     padding-left: 300px;
-    padding-top: 57px;
+}
+
+h1{
+    background:#014b5c; 
+    color: aliceblue;
+    top: 0px;
+    width: 100%;
+    height: 42px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 57px;
+    padding: 15px 0px 0px 0px;
 }
 
 .imageCur{
@@ -146,7 +152,7 @@ a:hover {
 }
 
 .contenido{
-    padding-left: 60px;
+    padding-left: 3%;
     padding-top: 30px;
 }
 
@@ -177,7 +183,6 @@ p{
 
 .barra-gene{
     background: rgb(0, 131, 155);
-    /* background: rgb(106, 128, 255); */
     height: 27px;
     width: 25%;
     padding-top: 3px;
@@ -234,7 +239,6 @@ p{
 }
 
 .barras-varias{
-    /* padding-top: 20px; */
     display: block;
 }
 
@@ -258,12 +262,12 @@ p{
 }
 
 .img-contac{
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
 }
 
 .img-contac1{
-    width: 100px;
+    width: 60px;
     float: left;
 }
 
@@ -272,7 +276,7 @@ p{
     font-family: Arial, Helvetica, sans-serif;
     width: 300px;
     padding-top: 35px;
-    padding-left: 110px;
+    padding-left: 65px;
 }
 
 #ctn1{
@@ -330,16 +334,22 @@ p{
     visibility: visible;
 }
 
-#desReco{
-    width: 91%;
+.desReco{
+    width: calc(100% - 59px);
     float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+}
+.bloquesExp{
+    display: block;
+    margin-top: 60px;
 }
 
 .iconosExp{
-    width: 7%;
-    height: 50px;
+    width: 50px;
+    height: 100%;
     font-size: 50px;
-    float: left;    
+    display: inline-block;
     cursor: pointer;
     color: #ff6c0a;
 }
@@ -348,15 +358,20 @@ p{
     color: #d1ce24;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1040px){
+    #bloque1, #bloque2{
+        width: 320px;
+    }
+    .enunciado{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 940px){
     #ctn1{
+        margin: 15%;
         display: block;
     }
-
-    h1{
-        padding-left: 57px;
-    }
-
 }
 
 @media screen and (max-width: 830px){
@@ -388,6 +403,12 @@ p{
 
 }
 
+@media screen and (max-width: 550px){
+    h1{
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 460px){
     .enunciado{
         font-size: 18px;
@@ -399,6 +420,9 @@ p{
     }
     .img-contac1{
         width: 80px;
+    }
+    h1{
+        padding-left: 30px;
     }
 }
 
@@ -413,6 +437,9 @@ p{
     }
     .img-contac1{
         width: 70px;
+    }
+    h1{
+        font-size: 17px;
     }
 }
 

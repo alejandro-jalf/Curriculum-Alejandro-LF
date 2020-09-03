@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="./styles/stylenum.css">
 </head>
 <body>
-    <div id="tam"></div>
-    <header>
-        <!-- <h1>José alejandro López Flores</h1> -->
-    </header>
+    <!-- <header>
+        <h1>Ing. en Sistemas Computacionales</h1>
+    </header> -->
     <section id="app">
         <div v-if="menuVisible" id="Izquierda2" @click="setMenu()"><span class="icon-th-list"></span></div>
         <div v-if="backgroundVisible" class="background"></div>
@@ -39,6 +38,7 @@
             </div>
         </div>
         <div id="Derecha">
+            <h1>Ing. en Sistemas Computacionales</h1>
             <div v-if="screenActual === 'DtPersonales'" class="cajas" id="DtPersonales" >
                 <div class="titulos">
                     <img class="imageCur" src="./image/dtosicon.svg" >
@@ -104,9 +104,9 @@
                     <div class="texto">Reconocimientos</div>
                 </div>
                 <div class="contenido">
-                    <div id="bloquesExp">
-                            <span class="iconosExp icon-number"></span>
-                            <p id="desReco">Reconocimiento de participacion en el Encuentro Nacional de Innovacion Tecnologica, en Tehuacan Puebla</p>
+                    <div v-for="reconocimiento in reconocimientos" class="bloquesExp">
+                        <div v-bind:class="`iconosExp ${reconocimiento.iconClass}`"></div>
+                        <div class="desReco">{{reconocimiento.description}}</div>
                     </div>
                 </div>
             </div>

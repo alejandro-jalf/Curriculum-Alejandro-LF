@@ -18,13 +18,18 @@ var app = new Vue({
         ],
         contactoB1: [
             {href: "https://web.whatsapp.com/", image: "./image/whaticon.png", tooltip: "Copiar numero telefonico", enunciado: "922-155-2556", callBack: "9221552556"},
-            {href: "https://www.facebook.com/alex.lopes.3538", image: "./image/fbIcon.ico", tooltip: "Ver perfil y Copiar nombre", enunciado: "Alex lopes", callBack: "Alex lopes"},
+            {href: "https://www.facebook.com/alex.lopes.3538", image: "./image/fbIcon.png", tooltip: "Ver perfil y Copiar nombre", enunciado: "Alex lopes", callBack: "Alex lopes"},
             {href: "https://twitter.com/Alejand45768571", image: "./image/twiter.png", tooltip: "Ver perfil", enunciado: "Alejandro Lopez Flores", callBack: ""}
         ],
         contactoB2: [
             {href: "https://login.live.com/", image: "./image/hotmail.png", tooltip: "Ir a Outlook.com y Copiar contacto", enunciado: "aleflo_1996@outlook.com", callBack: "aleflo_1996@outlook.com"},
             {href: "https://gmail.com", image: "./image/gmail.png", tooltip: "Ir a Gmail.com y Copiar contacto", enunciado: "alexlofa45@gmail.com", callBack: "alexlofa45@gmail.com"},
-            {href: "https://github.com/alejandro-jalf", image: "./image/giticon.png", tooltip: "Ir a la pagina de Github", enunciado: "alejandro-jalf", callBack: ""}
+            {href: "https://github.com/alejandro-jalf?tab=repositories", image: "./image/giticon.png", tooltip: "Ir a la pagina de Github", enunciado: "alejandro-jalf", callBack: ""}
+        ],
+        reconocimientos: [
+            {iconClass: "icon-number", description: "Reconocimiento de participacion en el Encuentro Nacional de Innovacion Tecnologica 2018, en Tehuacan Puebla"},
+            {iconClass: "icon-number1", description: "Reconocimiento de participacion en el Encuentro Nacional de Innovacion Tecnologica 2019, en Veracruz Veracruz"},
+            {iconClass: "icon-number2", description: "Segundo Lugar en el concurso Estatal de programación, cede en San AndrésTuxtla Veracruz"}
         ]
     },
     mounted: function(){
