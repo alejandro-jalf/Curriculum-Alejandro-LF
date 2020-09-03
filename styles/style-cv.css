@@ -83,7 +83,11 @@ h4{
 
 .Botones{
     padding-top: 15px;
-    
+}
+
+.activated {
+    text-decoration: underline;
+    color: #fbff00;
 }
 
 li{
@@ -238,8 +242,6 @@ p{
     padding-bottom: 20px;
 }
 
-
-
 .segmento{
     height: 100px;
     width: 400px; 
@@ -374,6 +376,34 @@ p{
         padding-left: 0px;
     }
 
+}
+
+@media screen and (max-width: 460px){
+    .enunciado{
+        font-size: 18px;
+        padding-left: 90px;
+    }
+    .img-contac{
+        width: 70px;
+        height: 70px;
+    }
+    .img-contac1{
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 395px){
+    .enunciado{
+        font-size: 16px;
+        padding-left: 80px;
+    }
+    .img-contac{
+        width: 60px;
+        height: 60px;
+    }
+    .img-contac1{
+        width: 70px;
+    }
 }
 
 @media screen and (max-height: 600px){

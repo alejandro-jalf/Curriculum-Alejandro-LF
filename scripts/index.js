@@ -28,17 +28,18 @@ var app = new Vue({
     },
     mounted: function(){
         this.setLeft();
-        this.menuVisible = this.isMovilScreen();
+        this.menuVisible = (this.isMovilScreen() === 0) ? true : false;
     },
     methods: {
         setLeft: function() {
-            if (this.isMovilScreen()) {
+            if (this.isMovilScreen() === 0) {
                 this.leftVisible = true;
             }
         },
         isMovilScreen: function() {
-            const tamaño = window.innerHeight || document.documentElement.clientWidth || document.body.clientWidth;
-            const isMovil = (tamaño >= 540);
+            const lengthS = window.innerHeight || document.documentElement.clientWidth || document.body.clientWidth;
+            const isMovil = (lengthS >= 540) ? 0 : 1;
+            // alert(lengthS + "__"+ isMovil + "msj"); 
             return isMovil
         },
         setMenu: function() {
@@ -46,7 +47,8 @@ var app = new Vue({
         },
         setScreen: function(screen) {
             this.screenActual = screen;
-            if (this.isMovilScreen() === false) {
+            // alert(this.isMovilScreen());
+            if (this.isMovilScreen() === 1) {
                 this.setMenu();
             }
         },

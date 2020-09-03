@@ -29,12 +29,12 @@
             
             <div class="Botones">
                 <ul>
-                    <li @click="setScreen('DtPersonales')"><a id="btnDTP" href="#">Datos Personales</a></li>
-                    <li @click="setScreen('HistorialACD')"><a id="btnHA" href="#">Historial Academico</a></li>
-                    <li @click="setScreen('Habilidades')"><a id="btnH" href="#">Habilidades</a></li>
-                    <li @click="setScreen('ExpPro')"><a id="btnEP" href="#">Experiencia Profecional</a></li>
-                    <li @click="setScreen('Recon')"><a id="btnPR" href="#">Reconocimientos</a></li>
-                    <li @click="setScreen('Contac')"><a id="btnC" href="#">Contacto</a></li>
+                    <li @click="setScreen('DtPersonales')"><a v-bind:class="{activated: (screenActual === 'DtPersonales')}" id="btnDTP" href="#">Datos Personales</a></li>
+                    <li @click="setScreen('HistorialACD')"><a v-bind:class="{activated: (screenActual === 'HistorialACD')}" id="btnHA" href="#">Historial Academico</a></li>
+                    <li @click="setScreen('Habilidades')"><a v-bind:class="{activated: (screenActual === 'Habilidades')}" id="btnH" href="#">Habilidades</a></li>
+                    <li @click="setScreen('ExpPro')"><a v-bind:class="{activated: (screenActual === 'ExpPro')}" id="btnEP" href="#">Experiencia Profecional</a></li>
+                    <li @click="setScreen('Recon')"><a v-bind:class="{activated: (screenActual === 'Recon')}" id="btnPR" href="#">Reconocimientos</a></li>
+                    <li @click="setScreen('Contac')"><a v-bind:class="{activated: (screenActual === 'Contac')}" id="btnC" href="#">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -156,7 +156,7 @@
     <script>
         window.onresize = (event) => {
             app.setLeft();
-            app.menuVisible = app.isMovilScreen();
+            app.menuVisible = (app.isMovilScreen() == 0) ? true : false ;
         }
     </script>
     <!-- <script src="./scripts/script.js"></script> -->
