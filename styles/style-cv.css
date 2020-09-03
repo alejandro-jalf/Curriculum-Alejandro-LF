@@ -407,6 +407,13 @@ p{
         padding-left: 0px;
     }
 
+    h1{
+        position: fixed;
+    }
+
+    .titulos{
+        padding-top: 60px;
+    }
 }
 
 @media screen and (max-width: 550px){
