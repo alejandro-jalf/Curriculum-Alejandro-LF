@@ -14,7 +14,7 @@
         <h1>Ing. en Sistemas Computacionales</h1>
     </header> -->
     <section id="app">
-        <div v-if="menuVisible" id="Izquierda2" @click="setMenu()"><span class="icon-th-list"></span></div>
+        <div id="Izquierda2" @click="setMenu()"><span class="icon-th-list"></span></div>
         <div v-if="backgroundVisible" class="background"></div>
         <div v-if="leftVisible" id="Izquierda">
             <div id="descargar" onclick="confirmar()"><span class="icon-download"></span><span class="tooltip">Descargar curriculum</span></div>
@@ -154,9 +154,7 @@
     <script src="./scripts/createPDF.js"></script>
     <script>
         window.onresize = (event) => {
-            // app.setLeft();
-            app.menuVisible = (app.isMovilScreen() == 1) ? true : false ;
-            // app.backgroundVisible = (app.isMovilScreen() === 1) ? true : false;
+            app.setLeft();
         }
     </script>
 </body>

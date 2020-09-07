@@ -1,7 +1,6 @@
 var app = new Vue({
     el: "#app",
     data: {
-        menuVisible: false,
         leftVisible: false,
         backgroundVisible: false,
         screenActual: "DtPersonales",
@@ -34,13 +33,11 @@ var app = new Vue({
     },
     mounted: function(){
         this.setLeft();
-        this.menuVisible = (this.isMovilScreen() === 1) ? true : false;
-        this.backgroundVisible = (this.isMovilScreen() === 1) ? true : false;
     },
     methods: {
         setLeft: function() {
             if (this.isMovilScreen() === 1) {
-                this.leftVisible = (this.isMovilScreen() === 1) ? true : false;
+                this.leftVisible = false;
             } else {
                 this.leftVisible = true;
             }
