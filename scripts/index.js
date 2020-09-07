@@ -37,9 +37,12 @@ var app = new Vue({
     methods: {
         setLeft: function() {
             if (this.isMovilScreen() === 1) {
-                this.leftVisible = false;
+                if (this.leftVisible) {
+                    this.backgroundVisible = true;
+                }
             } else {
                 this.leftVisible = true;
+                this.backgroundVisible = false;
             }
         },
         isMovilScreen: function() {
