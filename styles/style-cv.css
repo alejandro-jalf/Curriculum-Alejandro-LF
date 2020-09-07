@@ -3,6 +3,14 @@
     padding: 0px;
 }
 
+.divider{
+    background: #014b5c;
+    height: 2px;
+    width: 95%;
+    float: left;
+    margin-bottom: 30px;
+}
+
 body{
     position: relative;
     display: inline;

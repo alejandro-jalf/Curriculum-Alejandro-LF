@@ -29,6 +29,9 @@ var app = new Vue({
             {iconClass: "icon-number", description: "Reconocimiento de participacion en el Encuentro Nacional de Innovacion Tecnologica 2018, en Tehuacan Puebla"},
             {iconClass: "icon-number1", description: "Reconocimiento de participacion en el Encuentro Nacional de Innovacion Tecnologica 2019, en Veracruz Veracruz"},
             {iconClass: "icon-number2", description: "Segundo Lugar en el concurso Estatal de programación, cede en San AndrésTuxtla Veracruz"}
+        ],
+        experiencias: [
+            {Inicio: "Julio 2020", Termino: "Actualmente laborando", Cargo: "Departamento de sistemas", Empresa: "Super Promociones de Acayucan", Image: "./image/SPA.png"}
         ]
     },
     mounted: function(){

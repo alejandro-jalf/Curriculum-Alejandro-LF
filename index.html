@@ -98,6 +98,16 @@
                     <img class="imageCur" src="./image/expeicon.png" >
                     <div class="texto">Experiencia Profesional</div>
                 </div>
+                <div class="contenido">
+                    <div v-for="experiencia in experiencias" class="bloquesExp" style="margin-bottom: 50px;">
+                        <img v-bind:src="experiencia.Image" alt="" width="25%" style="margin-left: 37%;">
+                        <div class="desReco" style="margin-bottom: 10px;"><span style="font-weight: bold;">Empresa:</span> {{experiencia.Empresa}}</div>
+                        <div class="desReco" style="margin-bottom: 10px;"><span style="font-weight: bold;">Cargo:</span> {{experiencia.Cargo}}</div>
+                        <div class="desReco" style="margin-bottom: 10px;"><span style="font-weight: bold;">Fecha de inicio:</span> {{experiencia.Inicio}}</div>
+                        <div class="desReco" style="margin-bottom: 10px;"><span style="font-weight: bold;">Fecha de termino:</span> {{experiencia.Termino}}</div>
+                        <div class="divider"></div>
+                    </div>
+                </div>
             </div>
             <div v-if="screenActual === 'Recon'" class="cajas" id="Recon">
                 <div class="titulos">
