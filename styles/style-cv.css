@@ -343,6 +343,7 @@ p{
 .bloquesExp{
     display: block;
     margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 .iconosExp{
@@ -413,6 +414,9 @@ p{
 @media screen and (max-width: 550px){
     h1{
         font-size: 20px;
+    }
+    .desReco{
+        font-size: 19px;
     }
 }
 
