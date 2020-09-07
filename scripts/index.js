@@ -17,7 +17,7 @@ var app = new Vue({
             {name: "JQuery", porcentaje: 50, id: "barra-int9"}
         ],
         contactoB1: [
-            {href: "https://web.whatsapp.com/", image: "./image/whaticon.png", tooltip: "Copiar numero telefonico", enunciado: "922-155-2556", callBack: "9221552556"},
+            {href: "tel:+529221552556", image: "./image/whaticon.png", tooltip: "Copiar numero telefonico", enunciado: "922-155-2556", callBack: "9221552556"},
             {href: "https://www.facebook.com/alex.lopes.3538", image: "./image/fbIcon.png", tooltip: "Ver perfil y Copiar nombre", enunciado: "Alex lopes", callBack: "Alex lopes"},
             {href: "https://twitter.com/Alejand45768571", image: "./image/twiter.png", tooltip: "Ver perfil", enunciado: "Alejandro Lopez Flores", callBack: ""}
         ],
@@ -73,32 +73,28 @@ var app = new Vue({
         getOldActual: function() {
             const fecha = new Date();
             
-            let año_actual = 0;
-            let mes_actual = 0;
-            let dia_actual = 0;
+            const year_actual = fecha.getFullYear();
+            const mes_actual = (fecha.getMonth())+1;
+            const dia_actual = fecha.getDate();
             let edad = 0;
 
-            dia_actual = fecha.getDate();
-            mes_actual = (fecha.getMonth())+1;
-            año_actual = fecha.getFullYear();
-
             if (mes_actual > 11) {
-                edad = año_actual - 1996;
+                edad = year_actual - 1996;
                 return edad;
             }
 
             if (mes_actual < 11) {
-                edad = año_actual - 1997;
+                edad = year_actual - 1997;
                 return edad;
             }
 
             if (mes_actual == 11) {
                 if (dia_actual < 18) {
-                    edad = 2018 - 1997;
+                    edad = year_actual - 1997;
                     return edad;
                 }
                 if ( dia_actual >= 18) {
-                    edad = 2018 - 1996;
+                    edad = year_actual - 1996;
                     return edad;
                 }
             }
